@@ -1,0 +1,29 @@
+{
+  "name": "Monportfolio",
+  "description": "Portfolio professionnel avec React, Vite et Tailwind CSS",
+  "keywords": ["react", "vite", "portfolio", "tailwindcss"],
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment de l'application",
+      "value": "production"
+    }
+  },
+  "build": {
+    "builder": "DOCKERFILE",
+    "buildCommand": "npm install && npm run build"
+  },
+  "deploy": {
+    "startCommand": "serve -s dist -l 3000",
+    "restartPolicyType": "always",
+    "healthchecks": {
+      "web": {
+        "type": "HTTP",
+        "interval": 30,
+        "timeout": 10,
+        "retries": 3,
+        "startPeriod": 5,
+        "path": "/"
+      }
+    }
+  }
+}

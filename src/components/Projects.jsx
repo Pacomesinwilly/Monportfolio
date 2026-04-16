@@ -5,54 +5,54 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Portfolio Personnel',
-      description: 'Site portfolio professionnel avec React, Vite, Tailwind CSS et Framer Motion. Animations fluides, responsive design et section admin protégée.',
-      technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-      github: 'https://github.com/Pacomesinwilly/monportfolio',
-      gitlab: 'https://gitlab.com/pacomesinwilly/monportfolio',
-      live: '#'
+      title: 'Monportfolio',
+      description: 'Portfolio professionnel moderne avec React, Vite, Tailwind CSS et Framer Motion. Animations fluides, responsive design, section admin avec gestion des messages. Déployable sur Render/Railway.',
+      technologies: ['React 19', 'Vite 8', 'Tailwind CSS 3', 'Framer Motion', 'React Icons'],
+      github: 'https://github.com/Pacomesinwilly/Monportfolio',
+      gitlab: '#',
+      live: 'https://monportfolio.render.com'
     },
     {
       id: 2,
-      title: 'Système de Gestion Réseau',
-      description: 'Application de gestion et monitoring des réseaux informatiques. Configuration des routeurs, firewalls et analyse du trafic.',
-      technologies: ['Linux', 'Python', 'Cisco', 'TCP/IP'],
-      github: '#',
-      gitlab: 'https://gitlab.com/pacomesinwilly',
+      title: 'Mon CV Web',
+      description: 'Curriculum Vitae interactif en HTML/CSS. Version web professionnelle de mon CV avec design épuré et responsive.',
+      technologies: ['HTML5', 'CSS3', 'Responsive Design'],
+      github: 'https://github.com/Pacomesinwilly/mon-cv',
+      gitlab: '#',
       live: '#'
     },
     {
       id: 3,
-      title: 'Application Web E-commerce',
-      description: 'Plateforme e-commerce développée en PHP/Laravel avec MySQL. Panier, paiement et gestion des stocks.',
-      technologies: ['PHP', 'Laravel', 'MySQL', 'Bootstrap'],
-      github: '#',
-      gitlab: 'https://gitlab.com/pacomesinwilly',
+      title: 'Portfolio Maquettes',
+      description: 'Collection de maquettes web incluant e-commerce et site vitrine. Prototypes et designs HTML/CSS pour projets web.',
+      technologies: ['HTML5', 'CSS3', 'Web Design'],
+      github: 'https://github.com/Pacomesinwilly/portfolio-maquettes',
+      gitlab: '#',
       live: '#'
     },
     {
       id: 4,
-      title: 'API REST Node.js',
-      description: 'API RESTful avec Node.js et Express pour gestion des utilisateurs et données. Documentation complète et tests unitaires.',
-      technologies: ['Node.js', 'Express', 'MongoDB', 'JWT'],
-      github: 'https://github.com/Pacomesinwilly',
-      gitlab: 'https://gitlab.com/pacomesinwilly',
+      title: 'Konoula',
+      description: 'Plateforme collaborative de gestion de projets et de tâches. Application web développée en groupe avec authentification utilisateur et dashboard intéractif.',
+      technologies: ['PHP', 'Laravel', 'MySQL', 'Bootstrap', 'JavaScript'],
+      github: '#',
+      gitlab: 'https://gitlab.com/pacomesinwilly/konoula',
       live: '#'
     },
     {
       id: 5,
-      title: 'Dashboard d\'Administration',
-      description: 'Panel d\'administration avec graphiques, statistiques et gestion des utilisateurs. Interface intuitive et sécurisée.',
-      technologies: ['React', 'Chart.js', 'Tailwind CSS', 'Firebase'],
-      github: 'https://github.com/Pacomesinwilly',
-      gitlab: 'https://gitlab.com/pacomesinwilly',
+      title: 'Dyra',
+      description: 'Application de gestion d\'infrastructure réseau et surveillance. Projet collectif pour monitoring et configuration des systèmes informatiques.',
+      technologies: ['Python', 'Django', 'PostgreSQL', 'Linux', 'Networking'],
+      github: '#',
+      gitlab: 'https://gitlab.com/pacomesinwilly/dyra',
       live: '#'
     },
     {
       id: 6,
-      title: 'Script d\'Automation Réseau',
-      description: 'Scripts Python pour automatiser les configurations réseau, déploiement de services et monitoring d\'infrastructure.',
-      technologies: ['Python', 'Linux Shell', 'Ansible', 'Docker'],
+      title: 'Plus de projets',
+      description: 'Découvrez d\'autres contributions et projets en cours sur mes profils GitHub et GitLab. Consultez mes dépôts pour voir le code source complet et les contributions.',
+      technologies: ['Divers', 'En cours', 'Open Source'],
       github: 'https://github.com/Pacomesinwilly',
       gitlab: 'https://gitlab.com/pacomesinwilly',
       live: '#'
@@ -170,11 +170,11 @@ export default function Projects() {
           transition={{ delay: 0.8 }}
           className="p-8 bg-gradient-to-r from-slate-800 to-slate-700 rounded-xl border border-slate-600 text-center"
         >
-          <h3 className="text-2xl font-bold text-blue-400 mb-4">Vous cherchez d'autres projets?</h3>
+          <h3 className="text-2xl font-bold text-blue-400 mb-4">Consultez tous mes projets</h3>
           <p className="text-slate-300 mb-6">
-            Visitez mes profils GitHub et GitLab pour découvrir tous mes projets et contributions.
+            Visitez mes profils GitHub et GitLab pour découvrir tous mes projets, contributions et le code source complet.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 flex-wrap">
             <motion.a
               href="https://github.com/Pacomesinwilly"
               target="_blank"

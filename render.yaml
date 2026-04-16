@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: monportfolio
+    runtime: docker
+    plan: free
+    region: iad
+    healthCheckPath: /
+    healthCheckInterval: 30
+    maxShutdownDelay: 30
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+    disk:
+      name: monportfolio-disk
+      mountPath: /app
+      sizeGB: 10
