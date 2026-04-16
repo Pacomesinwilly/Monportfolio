@@ -6,24 +6,12 @@
     "NODE_ENV": {
       "description": "Environment de l'application",
       "value": "production"
+    },
+    "NODE_VERSION": {
+      "description": "Version de Node.js",
+      "value": "20"
     }
   },
-  "build": {
-    "builder": "DOCKERFILE",
-    "buildCommand": "npm install && npm run build"
-  },
-  "deploy": {
-    "startCommand": "serve -s dist -l 3000",
-    "restartPolicyType": "always",
-    "healthchecks": {
-      "web": {
-        "type": "HTTP",
-        "interval": 30,
-        "timeout": 10,
-        "retries": 3,
-        "startPeriod": 5,
-        "path": "/"
-      }
-    }
-  }
+  "buildCommand": "npm ci && npm run build",
+  "startCommand": "npm install -g serve && serve -s dist -l 3000"
 }

@@ -1,20 +1,18 @@
 services:
   - type: web
     name: monportfolio
-    runtime: docker
+    runtime: node
+    runtimeVersion: 20.11.0
     plan: free
     region: iad
     healthCheckPath: /
     healthCheckInterval: 30
     maxShutdownDelay: 30
     autoDeploy: true
-    dockerfilePath: ./Dockerfile
+    buildCommand: npm ci && npm run build
+    startCommand: npm install -g serve && serve -s dist -l 3000
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 3000
-    disk:
-      name: monportfolio-disk
-      mountPath: /app
-      sizeGB: 10
