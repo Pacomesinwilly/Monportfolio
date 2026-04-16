@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaCode, FaHardHat, FaArtwork } from 'react-icons/fa';
+import { FaCode, FaDatabase, FaPalette } from 'react-icons/fa';
 
 export default function Competences() {
   const competences = {
@@ -128,8 +128,8 @@ export default function Competences() {
         >
           {[
             { icon: FaCode, title: "Développement", desc: "Web & Backend" },
-            { icon: FaHardHat, title: "Infrastructure", desc: "Réseaux & Systèmes" },
-            { icon: FaArtwork, title: "Design", desc: "Adobe Suite" }
+            { icon: FaDatabase, title: "Données", desc: "Réseaux & Systèmes" },
+            { icon: FaPalette, title: "Design", desc: "Adobe Suite" }
           ].map((item, idx) => (
             <motion.div
               key={idx}

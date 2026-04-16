@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Hero from './components/Hero';
 import Formation from './components/Formation';
 import Experience from './components/Experience';
 import Competences from './components/Competences';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Navigation from './components/Navigation';
 import './App.css';
@@ -17,11 +18,12 @@ function App() {
     { id: 'formation', label: 'Formation' },
     { id: 'experience', label: 'Expérience' },
     { id: 'competences', label: 'Compétences' },
+    { id: 'projects', label: 'Projets' },
     { id: 'contact', label: 'Contact' },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a)', color: 'white' }}>
       <Navigation sections={sections} activeSection={activeSection} setActiveSection={setActiveSection} />
       
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
@@ -29,27 +31,30 @@ function App() {
         {activeSection === 'formation' && <Formation />}
         {activeSection === 'experience' && <Experience />}
         {activeSection === 'competences' && <Competences />}
+        {activeSection === 'projects' && <Projects />}
         {activeSection === 'contact' && <Contact />}
       </motion.div>
 
       {/* Footer */}
-      <footer className="border-t border-slate-700 py-8 px-4 mt-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-slate-400 mb-4">
+      <footer style={{ borderTop: '1px solid #334155', padding: '2rem 1rem', marginTop: '4rem' }}>
+        <div style={{ maxWidth: '56rem', margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ color: '#94a3b8', marginBottom: '1rem' }}>
             © 2025 Pacôme SINWILLY BONI. All rights reserved.
           </p>
-          <div className="flex justify-center gap-6">
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
             {[
-              { icon: FaGithub, url: '#' },
-              { icon: FaLinkedin, url: '#' },
+              { icon: FaGithub, url: 'https://github.com/Pacomesinwilly' },
+              { icon: FaLinkedin, url: 'https://www.linkedin.com/in/pacôme-sinwilly-988643288' },
               { icon: FaTwitter, url: '#' },
             ].map((social, idx) => (
               <motion.a
                 key={idx}
                 href={social.url}
-                whileHover={{ scale: 1.2, color: '#60a5fa' }}
+                target={social.url !== '#' ? '_blank' : undefined}
+                rel={social.url !== '#' ? 'noopener noreferrer' : undefined}
+                whileHover={{ scale: 1.2 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-                className="text-slate-400 hover:text-blue-400 transition-colors"
+                style={{ color: '#94a3b8', fontSize: '1.5rem', textDecoration: 'none', cursor: 'pointer' }}
               >
                 <social.icon size={24} />
               </motion.a>
