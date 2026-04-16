@@ -14,24 +14,6 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: 'Mon CV Web',
-      description: 'Curriculum Vitae interactif en HTML/CSS. Version web professionnelle de mon CV avec design épuré et responsive.',
-      technologies: ['HTML5', 'CSS3', 'Responsive Design'],
-      github: 'https://github.com/Pacomesinwilly/mon-cv',
-      gitlab: '#',
-      live: '#'
-    },
-    {
-      id: 3,
-      title: 'Portfolio Maquettes',
-      description: 'Collection de maquettes web incluant e-commerce et site vitrine. Prototypes et designs HTML/CSS pour projets web.',
-      technologies: ['HTML5', 'CSS3', 'Web Design'],
-      github: 'https://github.com/Pacomesinwilly/portfolio-maquettes',
-      gitlab: '#',
-      live: '#'
-    },
-    {
-      id: 4,
       title: 'Konoula',
       description: 'Plateforme collaborative de gestion de projets et de tâches. Application web développée en groupe avec authentification utilisateur et dashboard intéractif.',
       technologies: ['PHP', 'Laravel', 'MySQL', 'Bootstrap', 'JavaScript'],
@@ -40,7 +22,7 @@ export default function Projects() {
       live: '#'
     },
     {
-      id: 5,
+      id: 3,
       title: 'Dyra',
       description: 'Application de gestion d\'infrastructure réseau et surveillance. Projet collectif pour monitoring et configuration des systèmes informatiques.',
       technologies: ['Python', 'Django', 'PostgreSQL', 'Linux', 'Networking'],
@@ -49,7 +31,7 @@ export default function Projects() {
       live: '#'
     },
     {
-      id: 6,
+      id: 4,
       title: 'Plus de projets',
       description: 'Découvrez d\'autres contributions et projets en cours sur mes profils GitHub et GitLab. Consultez mes dépôts pour voir le code source complet et les contributions.',
       technologies: ['Divers', 'En cours', 'Open Source'],
