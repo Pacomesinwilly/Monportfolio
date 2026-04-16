@@ -23,11 +23,11 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: 'Dyra',
-      description: 'Application de gestion d\'infrastructure réseau et surveillance. Projet collectif pour monitoring et configuration des systèmes informatiques.',
-      technologies: ['Python', 'Django', 'PostgreSQL', 'Linux', 'Networking'],
+      title: 'Dyra - Logistiq Web',
+      description: 'Application web de gestion logistique développée lors de mes stages en entreprise (DYRA-Benin). Gestion des flux logistiques, suivi des commandes, inventaire et optimisation des opérations.',
+      technologies: ['PHP', 'Laravel', 'MySQL', 'Bootstrap', 'JavaScript'],
       github: '#',
-      gitlab: 'https://gitlab.com/pacomesinwilly/dyra',
+      gitlab: 'https://gitlab.com/DYRA-Benin/logistiq_web',
       live: '#'
     },
     {
